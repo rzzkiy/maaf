@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const phoneNumber = "6285732453220";
-        const message = "iya aku maafin kamu, tapi jangan di ulangi lagi";
+        const message = "iya aku maafin kamu, tapi jangan di ulangi lagi yaaa";
         const encodedMessage = encodeURIComponent(message);
         const waLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
