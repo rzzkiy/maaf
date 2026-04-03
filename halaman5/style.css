@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe4f3 0%, #f8d7ff 50%, #e0f7fa 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background love particles */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: 
+        radial-gradient(circle, rgba(255,105,180,0.15) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,182,193,0.12) 1px, transparent 1px);
+    background-size: 70px 70px;
+    background-position: 0 0, 40px 40px;
+    animation: float 35s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    padding: 20px;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Card utama - centered */
+.content-box {
+    background: rgba(255, 255, 255, 0.93);
+    border-radius: 28px;
+    padding: 45px 30px;
+    box-shadow: 
+        0 15px 40px rgba(255, 105, 180, 0.25),
+        0 0 0 8px rgba(255, 182, 193, 0.18);
+    border: 2px solid #ffb6c1;
+    position: relative;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 520px;
+    gap: 28px;
+}
+
+/* Teks intro */
+.intro-text {
+    font-size: 1.15rem;
+    color: #ff4d94;
+    font-weight: 500;
+}
+
+/* Bagian pertanyaan */
+.questions {
+    font-size: 1rem;
+    line-height: 2.1;
+    color: #444;
+    font-weight: 400;
+    max-width: 92%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.questions p {
+    margin-bottom: 18px;
+}
+
+/* Teks bridge */
+.bridge-text {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #e91e63;
+    font-weight: 500;
+    max-width: 90%;
+}
+
+/* Teks merah (sudah ada di HTML) */
+.red-text {
+    color: #4735e5;
+    font-weight: 700;
+}
+
+/* Tombol "hmmm" yang romantis */
+.fancy-button {
+    background: linear-gradient(135deg, #ff4d94, #ff79b8);
+    color: white;
+    border: none;
+    padding: 16px 55px;
+    font-size: 1.05rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(255, 77, 148, 0.4);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 260px;
+}
+
+.fancy-button:hover {
+    transform: translateY(-5px) scale(1.06);
+    box-shadow: 0 12px 30px rgba(255, 77, 148, 0.5);
+}
+
+.fancy-button::after {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 40%; height: 200%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.65), transparent);
+    transform: skewX(-25deg);
+    animation: shimmer 3s linear infinite;
+}
+
+/* Animasi */
+@keyframes float {
+    0% { background-position: 0 0, 40px 40px; }
+    100% { background-position: 140px 140px, 180px 180px; }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-180%) skewX(-25deg); }
+    100% { transform: translateX(450%) skewX(-25deg); }
+}
